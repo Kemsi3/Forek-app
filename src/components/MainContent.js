@@ -14,6 +14,13 @@ function MainContent() {
     const [selectedPhoto, setSelectedPhoto] = useState(null);
 
     useEffect(() => {
+        // Check if there's a selected photo in localStorage on component mount
+        const storedPhoto = localStorage.getItem('selectedPhoto');
+        if (storedPhoto) {
+            setSelectedPhoto(storedPhoto);
+            setIsModalOpen(true);
+        }
+
         const sections = document.querySelectorAll('.section-card, .section-image, .banner-text, .image-background img');
         const navLinks = document.querySelectorAll('.nav-link');
 
@@ -71,11 +78,15 @@ function MainContent() {
     const openModal = (photo) => {
         setSelectedPhoto(photo);
         setIsModalOpen(true);
+        // Save selected photo to localStorage
+        localStorage.setItem('selectedPhoto', photo);
     };
 
     const closeModal = () => {
         setSelectedPhoto(null);
         setIsModalOpen(false);
+        // Remove selected photo from localStorage when modal is closed
+        localStorage.removeItem('selectedPhoto');
     };
 
     const photos = [photo1, photo2, photo3, photo4, photo5, photo6];
@@ -125,14 +136,14 @@ function MainContent() {
                 <div className='row'>
                     {photos.slice(0, 3).map((photo, index) => (
                         <div className='col' key={index}>
-<img loading="lazy" src={photo} alt={`Photo ${index + 1}`} onClick={() => openModal(photo)} />
+                            <img loading="lazy" src={photo} alt={`Photo ${index + 1}`} onClick={() => openModal(photo)} />
                         </div>
                     ))}
                 </div>
                 <div className='row'>
                     {photos.slice(3).map((photo, index) => (
                         <div className='col' key={index + 3}>
-<img loading="lazy" src={photo} alt={`Photo ${index + 4}`} onClick={() => openModal(photo)} />
+                            <img loading="lazy" src={photo} alt={`Photo ${index + 4}`} onClick={() => openModal(photo)} />
                         </div>
                     ))}
                 </div>
@@ -142,7 +153,7 @@ function MainContent() {
                 <div className='contact-container'>
                     <img id="map-image" loading="lazy" src={map} alt="banner" />
                     <div className='contact-text'>
-                    <p>Autolaweta Rzeszów</p>
+                        <p>Autolaweta Rzeszów</p>
                         <p><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x473cfbbca6f709e5:0xccff66ee1a96a7a0?sa=X&ved=1t:8290&ictx=111">Wieniawskiego 63, 35-603 Rzeszów</a></p>
                         <p>+48 788 152 520</p>
                         <p>+48 575 121 052</p>
