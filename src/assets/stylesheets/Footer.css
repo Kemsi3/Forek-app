@@ -1,0 +1,18 @@
+.footer{
+    padding: 30px;
+    background-color: #edeaf3 !important;
+    display:flex;
+    justify-content: center;
+}
+
+i{
+
+
+    margin-right:20px;
+}
+
+.text-container{
+    
+    margin:auto;
+    display:block;
+}

@@ -1,0 +1,294 @@
+.body{
+    background-color: #f2f2f2;
+    width:100%;
+    display:flex;
+    align-items: center;
+    
+}
+
+.main-content{
+    background-color: #f2f2f2;
+    padding-top:75px;
+}
+
+#banner-section{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#banner-section h1{
+    font-size: 60px;
+    font-size: 4.5vw;
+    text-wrap: balance;
+}
+
+#banner-section p{
+    margin-top:20px;
+    margin-bottom:30px;
+}
+
+
+#banner-section a{
+
+    padding: 10px;
+    margin-right:5%;
+    text-decoration: none;
+    color:white;
+    background-color: black;
+}
+
+#banner-section a:hover {
+    background-color: #7c3fb1;
+    transition: background-color 0.6s ease;
+}
+
+.banner-text{
+    width:35%;
+    text-align: left;
+    margin-top:16vh;
+    margin-right:40px;
+   
+}
+
+#banner-section img {
+    
+    width: 512px;
+    transform:rotate(3deg); 
+}
+
+.image-background{
+
+    background-color: black;
+    transform:rotate(-3deg); 
+}
+
+.services-text{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#services-section h1{
+    text-align: center;
+}
+
+
+
+#gallery-section h1{
+    margin-bottom:30px;
+}
+
+.service-card{
+    margin:auto;
+    width:90%;
+    padding-top:20px;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#map-image{
+    width:20%;
+}
+
+#services-section
+{   
+    padding-top:100px;
+    margin:auto;
+    width:95%;
+}
+/* Final visible state */
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#contact-section{
+    width:100%;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+
+
+.contact-container{
+    width:100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.contact-container img{
+    margin:auto;
+}
+.contact-text{
+    margin:auto;
+}
+
+#contact-section .items {
+    margin:auto;
+}
+
+/* MainContent.css */
+.section-image {
+    text-align: center;
+}
+
+#contact-section a {
+    color:black;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    flex: 1;
+    margin: 5px;
+}
+
+.col img {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.col img:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#gallery-section {
+    margin:auto;
+    width:95%;
+}
+
+#gallery-section img {
+    justify-content: center;
+    width:85%;
+}
+.col{
+    text-align: center;
+    justify-content: center;
+    display:flex;
+    align-items: center;
+    margin-left:auto;
+}
+
+a{
+    color:black;
+}
+
+.row{
+    margin-bottom:20px;
+}
+
+@media only screen and (max-width: 990px) {
+
+.main-content{
+    padding-top:10px;
+}
+
+#map-image{
+    width:70%;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.contact-container{
+    display:block;
+    margin-bottom:20px;
+}
+    #banner-section img{
+
+        width:100%;
+        height:max-content;
+        
+    }
+
+    .image-background{
+        margin-top:40px;
+        width:100%;
+    }
+    
+    #banner-section{
+        padding:30px;
+        width:100%;
+        display:block;
+        text-align: center;
+        align-items: center;
+    }
+
+    .banner-text{
+        width:100%;
+        text-align: center;
+        margin-top:0;
+    }
+
+    .main-content{
+        margin-top:0px;
+    }
+
+    #banner-section h1{
+        font-size: 60px;
+        font-size: 8.5vw;
+        text-wrap: balance;
+    }
+
+    #services-section{
+        padding-top:30px;
+    }
+
+    .services-text{
+        display:block;
+    }
+
+    .service-card{
+        width:90%;
+        margin:auto;
+    }
+
+    .col{
+        width:100%;
+    }}
